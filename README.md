@@ -12,3 +12,7 @@ Ademas contiene la conexión, repositorio y servicio a base de datos MongoDB
 
 1. Crear ejecutable: mvn clean package
 2. java -jar microservicio-producto.jar
+
+##Swagger
+
+http://localhost:55087/producto/swagger-ui.html

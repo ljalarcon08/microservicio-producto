@@ -12,6 +12,7 @@ import com.example.la.producto.domain.ImagenRequest;
 import com.example.la.producto.service.CatalogoService;
 import com.example.la.producto.service.GenericServ;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import reactor.core.publisher.Mono;
 
 @RestController
@@ -26,6 +27,7 @@ public class CatalogoController extends GenericController<Catalogo>{
 		return service;
 	}
 	
+	@SecurityRequirement(name = "Bearer Authentication")
 	@PutMapping(path="/imagen/{id}")
 	public Mono<Catalogo> actualizaImagenCatalogo(@PathVariable String id,@RequestBody ImagenRequest imagenRequest){
 		return service.actualizaImagenCatalogo(id, imagenRequest.getImg());
