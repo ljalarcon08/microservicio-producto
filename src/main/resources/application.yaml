@@ -1,0 +1,5 @@
+springdoc:
+  api-docs:
+    path: /producto/v1/api-docs
+  swagger-ui:
+    path: /producto/swagger-ui.html
