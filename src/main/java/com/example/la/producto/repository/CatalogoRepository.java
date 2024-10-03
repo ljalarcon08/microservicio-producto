@@ -1,6 +1,5 @@
 package com.example.la.producto.repository;
 
-import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 
 import com.example.la.producto.document.Catalogo;

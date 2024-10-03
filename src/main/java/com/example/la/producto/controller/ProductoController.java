@@ -1,11 +1,8 @@
 package com.example.la.producto.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -20,6 +17,7 @@ import com.example.la.producto.domain.PaginaProducto;
 import com.example.la.producto.service.GenericServ;
 import com.example.la.producto.service.ProductoService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -52,6 +50,7 @@ public class ProductoController extends GenericController<Producto>{
 		return service.findProductoByName(name);
 	}
 	
+	@SecurityRequirement(name = "Bearer Authentication")
 	@PutMapping(path="/imagen/{id}")
 	public Mono<Producto> actualizaImagenProducto(@PathVariable String id,@RequestBody ImagenRequest imagenRequest){
 		return service.actualizaImagenProducto(id, imagenRequest.getImg());

@@ -1,14 +1,11 @@
 package com.example.la.producto.document;
 
-import java.io.Serializable;
 import java.util.Date;
-import java.util.Objects;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Document(collection = "catalogo")
 public class Catalogo{
