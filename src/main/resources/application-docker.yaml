@@ -7,12 +7,12 @@ springdoc:
 spring:
   data:
     mongodb:
-      uri: mongodb://mongodb:mongodb@localhost:27017/db_producto?authSource=admin
+      uri: mongodb://mongodb:mongodb@mongodb:27017/db_producto?authSource=admin
       auto-index-creation: true
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://microservicio-eureka:8761/eureka/
   instance:
     preferIpAddress: true
