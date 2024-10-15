@@ -1,0 +1,20 @@
+server:
+  port: 8070
+springdoc:
+  api-docs:
+    path: /producto/v1/api-docs
+  swagger-ui:
+    path: /producto/swagger-ui.html
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mongodb:mongodb@mongodb:27017/db_producto?authSource=admin
+      auto-index-creation: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://microservicio-eureka:8761/eureka/
+  instance:
+    preferIpAddress: true
