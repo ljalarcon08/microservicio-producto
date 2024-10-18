@@ -1,3 +1,5 @@
+server:
+  port: 8070
 springdoc:
   api-docs:
     path: /producto/v1/api-docs
