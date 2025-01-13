@@ -64,7 +64,7 @@ public class ProductoDataLoader {
 
         Long countCat=catalogoRepository.count().block();
 
-        if(countCat.equals(0L)){
+        if(countCat!=null && countCat.equals(0L)){
             Resource resource = resourceLoader.getResource("classpath:" + "catalogo.json");
             InputStream in = null;
             try {
