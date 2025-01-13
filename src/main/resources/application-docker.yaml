@@ -9,7 +9,7 @@ springdoc:
 spring:
   data:
     mongodb:
-      uri: mongodb://mongodb:mongodb@mongodb:27017/db_producto?authSource=admin
+      uri: mongodb://mongodb:mongodb@mongoDB:27017/db_producto?authSource=admin
       auto-index-creation: true
 
 eureka:
